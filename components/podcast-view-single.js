@@ -57,31 +57,31 @@ class Component extends LitElement {
 
     const backHandler = () => store.loadList();
 
-    const seasons = show.seasons.map(({ episodes, title, seasons }) => {
-      const clicks = () => store.loadSeason(seasons);
+      const clickHandler = () => store.loadSeason(show.id);
 
-      return html`
+      const seasons = show.seasons.map(({ episodes, title, season }) => {
+
+        return html`
         <div>
-          <form action="./components/podcast-view-season.js">
-            <button>Go to: <strong>${title}</strong></button>
-          </form>
-
+          <button id="${season}" onclick="alert(this.id)" @click="${clickHandler}">Go to: <strong>${title}</strong></button>
+        
           <!--${episodes.map(({ file, title: innerTitle }) => {
-            return html`
-              <div>
-                <div>${innerTitle}</div>
-                <audio controls>
-                  <source
-                    src="https://file-examples.com/storage/fe8c7eef0c6364f6c9504cc/2017/11/file_example_MP3_700KB.mp3"
-                    type="audio/mp3"
-                  />
-                </audio>
-              </div>
-            `;
-          })}-->
+                  return html`
+                      <div>
+                        <div>${innerTitle}</div>
+                        <audio controls>
+                          <source
+                            src="https://file-examples.com/storage/fe8c7eef0c6364f6c9504cc/2017/11/file_example_MP3_700KB.mp3"
+                            type="audio/mp3"
+                          />
+                        </audio>
+                      </div>
+                    `;
+                })}-->
         </div>
       `;
-    });
+      });
+    
 
     return html`
       <button @click="${backHandler}">&#8592; BACK</button>

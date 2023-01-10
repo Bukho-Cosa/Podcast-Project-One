@@ -10,13 +10,13 @@ export type preview = {
 export type show = {
     id: string
     title: string
-    seasons: season[]
+    seasons: seasons[]
     image: string
     genres: string[]
     updated: string
 }
 
-export type season = {
+export type seasons = {
     season: number
     title: string
     image: string
@@ -43,6 +43,7 @@ export type state = {
     phase: phase
     previews: preview[]
     single: null | show
+    seasons: seasons[]
     sorting: sorting
     search: string
 }

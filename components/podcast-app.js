@@ -33,6 +33,9 @@ class Component extends LitElement {
             case 'single': 
                 return html`<podcast-view-single></podcast-view-single>`
                 
+            case 'seasons': 
+                return html`<podcast-view-season></podcast-view-season>`
+                
             default: throw new Error('Invalid phase')
         }
     }

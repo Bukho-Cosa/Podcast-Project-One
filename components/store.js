@@ -72,14 +72,14 @@ class Store {
     }
 
     /**
-     * @param {number} season
+     * @param {string} id
      */
-    async loadSeason(season) {
+    async loadSeason(id) {
         this.update({
             phase: 'loading'
         })
 
-        if (!season) throw new Error ('"season" is required')
+        if (!id) throw new Error ('"season" is required')
         const response = await fetch(`https://podcast-api.netlify.app/id/${id}`)
 
         if (!response.ok) {
@@ -92,7 +92,7 @@ class Store {
 
         return this.update({
             phase: 'seasons',
-            season: data
+            seasons: data
         })
 
     }
@@ -149,6 +149,7 @@ class Store {
             phase: 'loading',
             previews: [],
             single: null,
+            seasons: null,
             sorting: 'a-z',
         }
 

@@ -51,15 +51,18 @@ class Component extends LitElement {
 
   static styles = css`
     .container {
+      /*margin-left: 5rem;
+      margin-right: 5rem;*/
       display: grid;
       width: 100%;
       grid-template-columns: 50% 50%; 
     }
     .inner-div { 
+      width: 320px;
       text-decoration: none;
       margin: 0;
       padding: 0;
-      border: 1px solid pink;
+      /*border: 1px solid pink;*/
       margin: 1rem;
     }
     button{
@@ -67,8 +70,8 @@ class Component extends LitElement {
         border-radius: 1rem;
     }
     img {
-      width: 300px;
-      height: 300px;
+      width: 294px;
+      height: 294px;
       border-radius: 1rem;
     }
     img:hover {
@@ -77,6 +80,12 @@ class Component extends LitElement {
     h3 {
       padding: 0 rem;
       margin: 0 rem;
+      text-align: center;
+      color: #2f3133;
+    }
+    h4{
+      text-align: center;
+      color: #717277;
     }
   `;
 
