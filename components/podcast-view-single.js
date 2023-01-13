@@ -61,10 +61,18 @@ class Component extends LitElement {
 
       const seasons = show.seasons.map(({ episodes, title, season }) => {
 
+        function findId() {
+          const buttonClass = document.querySelector(".oneNumber");
+          const seasonNumber = buttonClass.getAttribute("id").value();
+          console.log(seasonNumber);
+
+        }
+
         return html`
         <div>
-          <button id="${season}" onclick="alert(this.id)" @click="${clickHandler}">Go to: <strong>${title}</strong></button>
-        
+          <button class="oneNumber" id="${season}" onclick="findId()" @click="${clickHandler}">Go to: <strong>${title}</strong> episodes: ${episodes.length}</button>
+
+
           <!--${episodes.map(({ file, title: innerTitle }) => {
                   return html`
                       <div>
@@ -79,7 +87,7 @@ class Component extends LitElement {
                     `;
                 })}-->
         </div>
-      `;
+        `;
       });
     
 
