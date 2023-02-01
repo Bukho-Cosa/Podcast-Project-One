@@ -144,9 +144,9 @@ class Component extends LitElement {
       <h1>Podcast List</h1>
       <podcast-controls></podcast-controls>
       ${list.length > 0
-        ? html`<ul>
+        ? html`<div class="container">
             ${list}
-          </ul>`
+      </div>`
         : html`<div>No matches</div>`}
     `;
   }
