@@ -55,7 +55,7 @@ class Component extends LitElement {
       margin-right: 5rem;*/
       display: grid;
       width: 100%;
-      grid-template-columns: 50% 50%; 
+      grid-template-columns: 34% 33% 33%; 
     }
     .inner-div { 
       width: 320px;
@@ -124,7 +124,7 @@ class Component extends LitElement {
 
         return html`
           <div class="container">
-
+            
             <div class="inner-div">
               <button @click="${clickHandler}">
                 <li>${genres}</li>
@@ -141,7 +141,9 @@ class Component extends LitElement {
     );
 
     return html`
-      <h1>Podcast List</h1>
+      <h1><b>PODCAST LISTENING SITE</b></h1>
+      <hr>
+      <h1 style="text-align: center;">PODCAST LIST</h1>
       <podcast-controls></podcast-controls>
       ${list.length > 0
         ? html`<div class="container">
