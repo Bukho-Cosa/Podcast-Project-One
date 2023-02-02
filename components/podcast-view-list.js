@@ -141,7 +141,7 @@ class Component extends LitElement {
     );
 
     return html`
-      <h1><b>PODCAST LISTENING SITE</b></h1>
+      <h1><b>ONE LISTEN</b></h1>
       <hr>
       <h1 style="text-align: center;">PODCAST LIST</h1>
       <podcast-controls></podcast-controls>
