@@ -2,5 +2,5 @@
 
 ### A webpage where you can listen to your favourite podcast episodes.
 ---
-## *Webpage functionality: *
+## *Webpage functionality:*
  
